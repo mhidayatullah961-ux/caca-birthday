@@ -1,0 +1,40 @@
+*{box-sizing:border-box}
+:root{--pink:#ff6f9d;--pink2:#ffd7e4;--ink:#38242d;--cream:#fff9fb}
+body{margin:0;background:radial-gradient(circle at top,#fff0f6,#fff9fb 48%,#ffe9f1);color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background-image:radial-gradient(#ff8eaf 1px,transparent 1px);background-size:24px 24px;opacity:.12}
+main{width:min(680px,92%);margin:auto;padding:42px 0 70px;position:relative;z-index:2}
+.card{background:rgba(255,255,255,.86);border:1px solid rgba(255,111,157,.18);box-shadow:0 18px 55px rgba(174,72,108,.13);border-radius:28px;padding:28px}
+.hero{text-align:center;min-height:70vh;display:flex;flex-direction:column;justify-content:center;align-items:center}
+.tiny{font-size:11px;letter-spacing:3px;color:#c15b7d;font-weight:800}
+h1{font-size:clamp(46px,13vw,78px);line-height:.95;margin:18px 0 14px;color:#f15c8e;font-family:Georgia,serif}
+h2{font-family:Georgia,serif;font-size:32px;margin:8px 0 18px}
+h3{font-family:Georgia,serif;font-size:25px}
+.subtitle{max-width:430px;line-height:1.7;color:#765763}
+.primary,.music-btn{border:0;cursor:pointer;font-weight:800;border-radius:999px;padding:14px 23px;background:linear-gradient(135deg,#ff6f9d,#ff93b5);color:#fff;box-shadow:0 10px 25px rgba(255,111,157,.3);transition:.2s}
+.primary:hover,.music-btn:hover{transform:translateY(-2px)}
+.hidden{display:none}
+.surprise{animation:fade .8s ease}
+.photo-wrap{position:relative;margin:0 auto 22px;width:min(100%,500px)}
+.photo-wrap img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:30px;display:block;box-shadow:0 20px 55px rgba(90,45,60,.2)}
+.sticker{position:absolute;right:-8px;bottom:18px;background:#fff;padding:10px 16px;border-radius:999px;transform:rotate(5deg);box-shadow:0 8px 20px #0001;font-weight:800}
+.letter{line-height:1.85;font-size:16px}
+.date{font-size:11px;letter-spacing:1.6px;color:#c15b7d;font-weight:800}
+.signature{text-align:right;font-family:Georgia,serif;font-style:italic;color:#a94e6f;margin-top:25px}
+.wishes{margin-top:18px}
+.wish-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.wish-grid div{background:#fff1f6;border-radius:20px;padding:17px 10px;text-align:center}
+.wish-grid b{display:block;color:#ff6f9d;font-size:13px;margin-bottom:7px}
+.wish-grid span{font-size:13px}
+.music{margin-top:18px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.music>div:first-child{display:flex;align-items:center;gap:10px;flex:1}
+.music-icon{font-size:28px}
+.music small{display:block;color:#85636e;margin-top:3px}
+.music-btn{background:#38242d;box-shadow:none;padding:10px 18px}
+.music-note{width:100%;font-size:11px;color:#8b6d76;margin:0}
+.final{text-align:center;margin-top:18px;padding:35px 25px}
+.final h2{color:#f15c8e}
+.hearts{position:fixed;inset:0;pointer-events:none;z-index:1}
+.float-heart{position:absolute;bottom:-30px;animation:float linear forwards;opacity:.55}
+@keyframes float{to{transform:translateY(-110vh) rotate(25deg);opacity:0}}
+@keyframes fade{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@media(max-width:520px){main{padding-top:20px}.card{padding:22px}.hero{min-height:82vh}.wish-grid{grid-template-columns:1fr}.letter{font-size:15px}}
